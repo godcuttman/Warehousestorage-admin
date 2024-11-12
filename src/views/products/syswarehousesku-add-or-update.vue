@@ -5,7 +5,7 @@
         <el-input v-model="dataForm.id" placeholder="主键"></el-input>
       </el-form-item> -->
       <el-form-item label="花色样式" prop="pattern">
-        <el-input v-model="dataForm.pattern" placeholder="花色样式"></el-input>
+        <el-input v-model="dataForm.pattern" placeholder="请输入花色样式"></el-input>
       </el-form-item>
       <el-form-item label="花色图片" prop="skuUrl">
         <!-- <el-input v-model="dataForm.skuUrl" placeholder="花色图片"></el-input> -->
@@ -15,10 +15,10 @@
         </el-upload>
       </el-form-item>
       <el-form-item label="宽度" prop="width">
-        <el-input v-model="dataForm.width" placeholder="宽度"></el-input>
+        <el-input v-model="dataForm.width" placeholder="请输入宽度"></el-input>
       </el-form-item>
       <el-form-item label="长度" prop="length">
-        <el-input v-model="dataForm.length" placeholder="长度"></el-input>
+        <el-input v-model="dataForm.length" placeholder="请输入长度"></el-input>
       </el-form-item>
       <el-form-item label="片数" prop="piece">
         <ren-select v-model="dataForm.piece" dict-type="piece" placeholder="请选择片数"></ren-select>

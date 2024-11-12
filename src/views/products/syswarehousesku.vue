@@ -18,7 +18,11 @@
       <el-table-column type="selection" header-align="center" align="center" width="50"></el-table-column>
       <!-- <el-table-column prop="id" label="主键" header-align="center" align="center"></el-table-column> -->
       <el-table-column prop="pattern" label="花色样式" header-align="center" align="center"></el-table-column>
-      <el-table-column prop="skuUrl" label="花色图片" header-align="center" align="center"></el-table-column>
+      <el-table-column prop="skuUrl" label="花色图片" header-align="center" align="center">
+        <template v-slot="scope">
+          <el-image :src="scope.row.skuUrl" :fit="scope.row.skuUrl? 'cover' : 'none'" width="130" height="130"></el-image>
+        </template>
+      </el-table-column>
       <el-table-column prop="width" label="宽度" header-align="center" align="center"></el-table-column>
       <el-table-column prop="length" label="长度" header-align="center" align="center"></el-table-column>
       <!-- <el-table-column prop="delFlag" label="删除标识  0：未删除    1：删除" header-align="center" align="center"></el-table-column> -->
@@ -28,12 +32,12 @@
       <!-- <el-table-column prop="updateDate" label="更新时间" header-align="center" align="center"></el-table-column> -->
       <el-table-column prop="piece" label="片数" header-align="center" align="center">
         <template v-slot="scope">
-          {{ state.getDictLabel("piece",scope.row.fileType) }}
+          {{ state.getDictLabel("piece",scope.row.piece) }}
         </template>
       </el-table-column>
       <el-table-column prop="color" label="颜色" header-align="center" align="center">
         <template v-slot="scope">
-          {{ state.getDictLabel("color",scope.row.fileType) }}
+          {{ state.getDictLabel("color",scope.row.color) }}
         </template>
       </el-table-column>
       <el-table-column :label="$t('handle')" fixed="right" header-align="center" align="center" width="150">
